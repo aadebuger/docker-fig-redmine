@@ -1,0 +1,12 @@
+db:
+  image: ubuntu-mysql:14.04
+  ports:
+    - 22
+    - 3306
+web:
+  image: ubuntu-redmine:14.04
+  ports:
+    - 22
+    - 80
+  links:
+    - db
