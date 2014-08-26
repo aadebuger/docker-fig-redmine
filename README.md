@@ -1,11 +1,11 @@
 fig-redmine
 ===========
 
-Uses the fig to build docker containers so that Redmine on unicorn on nginx and MySQL.
+Uses the Fig to build docker containers so that Redmine on unicorn on nginx and MySQL.
 
 ## Usage
 
-Install fig
+Install Fig
 
 ```bash
 $ sudo apt-get install -y python-pip python2.7-dev
@@ -40,3 +40,6 @@ The image contains:
 - Git and Mercurial and Subversion
 - some additional themes and plugins
 - Ubuntu 14.04
+
+## References
+  * http://www.fig.sh/yml.html
