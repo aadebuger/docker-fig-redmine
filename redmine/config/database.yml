@@ -6,8 +6,8 @@
 production:
   adapter: mysql2
   database: redmine_production
-  host: <%= ENV.fetch('DB_1_PORT_3306_TCP_ADDR') %>
-  port: <%= ENV.fetch('DB_1_PORT_3306_TCP_PORT') %>
+  host: <%= ENV.fetch('DB_HOST') %>
+  port: 3306
   username: redmine
   password: "redmine"
   encoding: utf8
