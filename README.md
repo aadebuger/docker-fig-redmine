@@ -2,6 +2,12 @@ fig-redmine
 ===========
 
 Uses the Fig to build docker containers so that Redmine on unicorn on nginx and MySQL.
+blog: http://hidemium.hatenablog.com/entry/2014/09/04/123000 
+
+## Requirements
+
+Ubuntu 14.04
+Docker 1.0 or greater 
 
 ## Usage
 
@@ -42,4 +48,4 @@ The image contains:
 - Ubuntu 14.04
 
 ## References
-  * http://www.fig.sh/yml.html
+  * http://www.fig.sh
