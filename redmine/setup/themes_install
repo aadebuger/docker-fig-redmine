@@ -3,6 +3,8 @@ set -e
 
 INSTALL_DIR="/var/redmine"
 THEMES_INSTALL_DIR="${INSTALL_DIR}/public/themes"
+SETUP_DIR="/app/setup"
+THEMES_SETUP_DIR="${SETUP_DIR}/themes"
 
 # http://redminecrm.com/pages/a1-theme
 A1_VERSION=1_1_2

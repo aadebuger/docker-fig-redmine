@@ -3,6 +3,8 @@ set -e
 
 INSTALL_DIR="/var/redmine"
 PLUGINS_INSTALL_DIR="${INSTALL_DIR}/plugins"
+SETUP_DIR="/app/setup"
+PLUGINS_SETUP_DIR="${SETUP_DIR}/plugins"
 
 #
 ## Install tarballs

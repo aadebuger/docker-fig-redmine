@@ -50,6 +50,5 @@ RUN mkdir -p /var/log/supervisor /etc/supervisor/conf.d
 ADD sshd.conf /etc/supervisor/conf.d/sshd.conf
 
 # install bundler
-RUN \
-  echo 'gem: --no-rdoc --no-ri' >> /.gemrc && \
-  gem install bundler
+RUN echo 'gem: --no-rdoc --no-ri' >> /.gemrc && \
+    gem install bundler

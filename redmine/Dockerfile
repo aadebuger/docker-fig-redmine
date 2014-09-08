@@ -5,6 +5,8 @@ MAINTAINER hideakihal
 ENV REDMINE_VERSION 2.5-stable
 ENV REDMINE_HOME /var/redmine
 ENV SETUP_DIR /app/setup
+ENV THEMES_SETUP_DIR ${SETUP_DIR}/themes
+ENV PLUGINS_SETUP_DIR ${SETUP_DIR}/plugins
 ENV RAILS_ENV production
 
 # install basic package
@@ -24,12 +26,13 @@ RUN echo 'gem "unicorn"' >> Gemfile
 RUN bash -l -c 'bundle install --without development test'
 
 # install plugins
-RUN mkdir -p ${SETUP_DIR}
-ADD setup/themes_install ${SETUP_DIR}/themes_install
-ADD setup/plugins_install ${SETUP_DIR}/plugins_install
-RUN chmod 755 ${SETUP_DIR}/*
-RUN ${SETUP_DIR}/themes_install
-RUN ${SETUP_DIR}/plugins_install
+RUN mkdir -p ${SETUP_DIR} ${THEMES_SETUP_DIR} ${PLUGINS_SETUP_DIR}
+ADD setup/themes_install ${THEMES_SETUP_DIR}/themes_install
+ADD setup/plugins_install ${PLUGINS_SETUP_DIR}/plugins_install
+RUN chmod 755 ${THEMES_SETUP_DIR}/*
+RUN chmod 755 ${PLUGINS_SETUP_DIR}/*
+RUN ${THEMES_SETUP_DIR}/themes_install
+RUN ${PLUGINS_SETUP_DIR}/plugins_install
 
 # add config file
 ADD config/database.yml ${REDMINE_HOME}/config/database.yml
