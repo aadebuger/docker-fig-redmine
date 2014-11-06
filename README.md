@@ -22,6 +22,8 @@ $ sudo pip install -U fig
 Build docker images
 
 ```
+$ git clone https://github.com/hideakihal/docker-fig-redmine.git
+$ cd docker-fig-redmine
 $ sudo docker build -t ubuntu-mysql:14.04 mysql
 $ sudo docker build -t ubuntu-ruby:14.04 ruby
 $ sudo docker build -t ubuntu-redmine:14.04 redmine
