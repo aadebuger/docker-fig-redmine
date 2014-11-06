@@ -7,7 +7,8 @@ blog: http://hidemium.hatenablog.com/entry/2014/09/04/123000
 ## Requirements
 
 Ubuntu 14.04  
-Docker 1.0 or greater 
+Docker 1.0 or greater
+Fig 0.5.2
 
 ## Usage
 
