@@ -1,4 +1,4 @@
-fig-redmine
+docker-fig-redmine
 ===========
 
 Uses the Fig to build docker containers so that Redmine on unicorn on nginx and MySQL.  
