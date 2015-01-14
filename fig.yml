@@ -7,7 +7,7 @@ web:
   image: ubuntu-redmine:14.04
   ports:
     - 22
-    - 80
+    - 9091
   environment:
     - DB_HOST=db_1
   links:
